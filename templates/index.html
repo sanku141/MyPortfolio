@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanket Kshirsagar | Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.0/tsparticles.bundle.min.js"></script>
+
+</head>
+<body>
+    <div id="particles-js"></div>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="navcontainer">
+        <div class="logo">Sanket Kshirsagar</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            
+
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="section hero">
+    <div class="navcontainer">
+        <h1 class="fade-in">Hi, I'm <span>Sanket Kshirsagar</span></h1>
+        <p class=""><span class="typed-text"></span><span class="cursor">|</span></p>
+
+    </div>
+    <a href="{{ url_for('static', filename='resume.pdf') }}" class="btn-resume" download>Download Resume</a>
+</section>
+
+<!-- About -->
+<section id="about" class="section about">
+    <div class="container">
+        <h2 class="fade-in">About Me</h2>
+        <p class="fade-in delay-1">Hey there! I'm a developer who loves building cool stuff with AI, automation, and clean code.
+
+            By day, I work at Wipro as a Network Automation Developer. By night, I create things like Cortex, my personal voice assistant powered by OpenAI — it listens, responds, and even controls my PC.
+            
+            I also made a Flask app that creates reels/videos from text and images (yes, it talks too!). I’ve worked with PHP and CodeIgniter in the past, and I’m always learning, building, and experimenting with new tech.
+            
+            Let’s connect or collaborate — I’m always up for interesting projects!</p>
+        
+        <h3 class="fade-in delay-2">Skills</h3>
+        <div class="skills-icons fade-in delay-2">
+            <i class="devicon-python-plain colored"></i>
+            <i class="devicon-javascript-plain colored"></i>
+            <i class="devicon-html5-plain colored"></i>
+            <i class="devicon-css3-plain colored"></i>
+            <i class="devicon-flask-original colored"></i>
+            <i class="devicon-github-original colored"></i>
+        </div>
+        <div class="skills-grid fade-in delay-3">
+            <div class="skill-item" data-skill="programming">Programming Languages</div>
+            <div class="skill-item" data-skill="web">Web Development</div>
+            <div class="skill-item" data-skill="js">JavaScript</div>
+            <div class="skill-item" data-skill="ai">AI & Automation</div>
+            <div class="skill-item" data-skill="tools">Tools & Platforms</div>
+        </div>
+        
+        <div class="skill-description fade-in delay-4" id="skill-detail-box">
+            <p id="skill-detail-text">Hover over a skill to see more details.</p>
+        </div>
+        
+    </div>
+    
+    
+</section>
+
+<!-- Projects -->
+<section id="projects" class="section projects">
+    <div class="container">
+        <h2 class="fade-in">Projects</h2>
+
+        <div class="project-card fade-in delay-2">
+            <h3>Monthly Allowance Report</h3>
+            <p>A Node.js-based web application designed to streamline daily and monthly reporting for professionals. 
+                The app allows users to input daily data including DA (Daily Allowance), 
+                TA (Travel Allowance), and Kilometers (Km), 
+                and then automatically calculates the monthly allowance totals based on the inputs and convert it into pdf.</p>
+            <div class="links">
+                <a href="https://github.com/sanku141/Daily_Report2.git" target="_blank">View Code</a>
+                <button class="btn-resume" onclick="togglePreview(this)">View Demo</button>
+            </div>
+            <div class="projectpreview" style="display:none;">
+                <iframe src="https://daily-report2.onrender.com/" frameborder="0" width="100%" height="300px"></iframe>
+            </div>
+        </div>
+        
+
+        <div class="project-card fade-in delay-2">
+            <h3>CortexAi-VidSnap</h3>
+            <p>Single-page Flask portfolio with code/demo toggle, scroll animations, and mobile-friendly layout.</p>
+            <div class="links">
+                <a href="https://github.com/sanku141/CortexAi-VidSnap.git" target="_blank">View Code</a>
+                <button class="btn-resume" onclick="togglePreview(this)">View Demo</button>
+            </div>
+            <div class="project-preview" style="display:none;">
+                <iframe src="https://cortexai-vidsnap.onrender.com/#gsc.tab=0" frameborder="0" width="100%" height="300px"></iframe>
+            </div>
+        </div>
+
+        <div class="project-card fade-in delay-2">
+            <h3>Portfolio Website</h3>
+            <p>Single-page Flask portfolio with code/demo toggle, scroll animations, and mobile-friendly layout.</p>
+            <div class="links">
+                <a href="https://github.com/yourusername/portfolio" target="_blank">View Code</a>
+                <button class="btn-resume" onclick="togglePreview(this)">View Demo</button>
+            </div>
+            <div class="project-preview" style="display:none;">
+                <iframe src="https://yourdemo.vercel.app" frameborder="0" width="100%" height="300px"></iframe>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section contact">
+    <div class="container">
+        <h2 class="fade-in">Contact</h2>
+        <p class="fade-in delay-1">Let's build something epic. Reach me at:</p>
+        <p class="fade-in delay-2">📧 sanketnk1401@gmail.com</p>
+        <p class="fade-in delay-3">🔗 <a href="https://github.com/yourusername" target="_blank">GitHub</a> | <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></p>
+    </div>
+</section>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

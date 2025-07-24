@@ -1,0 +1,28 @@
+🔗 2. LinkedIn / Freelance Bio / Resume Summary Version
+I’m a passionate developer currently working at Wipro as a Network Automation Engineer, with expertise in Python scripting and automation.
+
+I’ve developed Cortex, an AI voice assistant using OpenAI APIs, capable of responding to voice commands, executing offline system actions, and acting as a personal productivity tool.
+
+I also built a Flask-based video generation app that turns user-uploaded images and text into reels/videos using TTS and audio syncing.
+
+Previously, I worked at LBM Infotech, where I gained experience in PHP and CodeIgniter.
+
+Fast learner, creative builder, and always exploring the edge of tech — from AI to automation to web development.
+
+1. Short & Casual Version for Portfolio Website
+Hey there! I'm a developer who loves building cool stuff with AI, automation, and clean code.
+
+By day, I work at Wipro as a Network Automation Developer. By night, I create things like Cortex, my personal voice assistant powered by OpenAI — it listens, responds, and even controls my PC.
+
+I also made a Flask app that creates reels/videos from text and images (yes, it talks too!). I’ve worked with PHP and CodeIgniter in the past, and I’m always learning, building, and experimenting with new tech.
+
+Let’s connect or collaborate — I’m always up for interesting projects!
+
+
+
+
+
+
+
+
+https://daily-report2.onrender.com/
