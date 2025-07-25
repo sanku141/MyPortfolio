@@ -141,3 +141,12 @@ skillItems.forEach(item => {
     });
 });
 
+function toggleMenu() {
+    const nav = document.getElementById('navLinks');
+    nav.classList.toggle('show');
+}
+
+function closeMenu() {
+    const nav = document.getElementById('navLinks');
+    nav.classList.remove('show');
+}
