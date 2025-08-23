@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sanket Kshirsagar | Portfolio</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.15.1/devicon.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -17,7 +17,7 @@
 <!-- Navbar -->
 <nav class="navbar">
     <div class="navcontainer">
-        <div class="logo">Sanket Kshirsagar</div>
+        <div class="logo" ><a href="#" style="color: rgb(211, 227, 241);">Sanket Kshirsagar</a></div>
 
         <!-- Hamburger -->
         <div class="hamburger" onclick="toggleMenu()">
@@ -42,7 +42,14 @@
         <p class=""><span class="typed-text"></span><span class="cursor">|</span></p>
 
     </div>
+<<<<<<< HEAD:templates/index.html
     <a href="{{ url_for('static', filename='resume.pdf') }}" class="btn-resume" download>Download Resume</a>
+=======
+    <a href="static/Kshirsagar_Sanket_Resume.pdf" download="Kshirsagar_Sanket_Resume.pdf" class="btn-resume">
+        Download Resume
+    </a>
+    
+>>>>>>> f3ce7ffc7fa6e43ec6d74362cb8ad9211311e2f6:index.html
 </section>
 
 <!-- About -->
@@ -145,6 +152,6 @@
     </div>
 </section>
 
-<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+<script src="static/js/script.js"></script>
 </body>
 </html>
