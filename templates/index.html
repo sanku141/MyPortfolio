@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sanket Kshirsagar | Portfolio</title>
-    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.15.1/devicon.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -42,7 +42,7 @@
         <p class=""><span class="typed-text"></span><span class="cursor">|</span></p>
 
     </div>
-    <a href="static/Kshirsagar_Sanket_Resume.pdf" class="btn-resume" download>Download Resume</a>
+    <a href="{{ url_for('static', filename='Kshirsagar_Sanket_Resume.pdf') }}" class="btn-resume" download>Download Resume</a>
 </section>
 
 <!-- About -->
@@ -146,6 +146,6 @@
     </div>
 </section>
 
-<script src="static/js/script.js"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
