@@ -1,1 +1,1 @@
-web: gunicorn app:app
+# DEPRECATED: Render deployment uses render.yaml configuration now.
