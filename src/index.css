@@ -1500,12 +1500,16 @@ textarea.form-input {
 
   .chatbot-window {
     position: fixed;
-    bottom: 0;
-    right: 0;
+    top: 0;
+    left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100dvh; /* Dynamic viewport height to clear mobile browser toolbars */
     border-radius: 0;
     z-index: 99999;
+  }
+
+  .chatbot-header {
+    padding-top: calc(15px + env(safe-area-inset-top, 15px)); /* Clear safe area notch */
   }
 }
 

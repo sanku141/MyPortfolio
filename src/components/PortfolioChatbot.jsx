@@ -33,6 +33,29 @@ const PortfolioChatbot = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages, isOpen]);
 
+  // Manage browser history for mobile back button gesture exit
+  useEffect(() => {
+    const handlePopState = () => {
+      setIsOpen(false);
+    };
+
+    if (isOpen) {
+      window.history.pushState({ chatbot: 'open' }, '');
+      window.addEventListener('popstate', handlePopState);
+    }
+
+    return () => {
+      window.removeEventListener('popstate', handlePopState);
+    };
+  }, [isOpen]);
+
+  const handleClose = () => {
+    setIsOpen(false);
+    if (window.history.state && window.history.state.chatbot === 'open') {
+      window.history.back();
+    }
+  };
+
   const resetChat = () => {
     setMessages([
       {
@@ -372,7 +395,7 @@ const PortfolioChatbot = () => {
                 <div className="chatbot-status">Online</div>
               </div>
             </div>
-            <button className="chatbot-close" onClick={() => setIsOpen(false)}>
+            <button className="chatbot-close" onClick={handleClose}>
               <X size={20} />
             </button>
           </div>
