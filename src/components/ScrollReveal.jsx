@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-const ScrollReveal = ({ children, direction = 'up', delay = 0, duration = 800, is3D = true }) => {
+const ScrollReveal = ({ children, direction = 'up', delay = 0, duration = 800, is3D = false }) => {
   const ref = useRef(null);
   const [transformStyle, setTransformStyle] = useState({});
   const [isIntersecting, setIsIntersecting] = useState(false);

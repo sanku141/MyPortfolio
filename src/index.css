@@ -1035,6 +1035,12 @@ textarea.form-input {
     padding: 60px 15px;
   }
 
+  .hero {
+    padding-top: 145px;
+    padding-bottom: 60px;
+    min-height: auto;
+  }
+
   .about-grid {
     grid-template-columns: 1fr;
     gap: 40px;
