@@ -124,7 +124,7 @@ const Hero = () => {
               onMouseLeave={handleMouseLeave}
             >
               <img
-                src="/images/assets/ProfilePotraitSanket.jpeg"
+                src="/images/assets/ProfilePotraitSanket.jpg"
                 alt="Sanket Kshirsagar Portrait"
                 className="interactive-portrait-img"
               />

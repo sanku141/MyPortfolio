@@ -13,13 +13,13 @@ const ParticleBackground = () => {
 
     const particles = [];
     const particleCount = Math.min(80, Math.floor((width * height) / 15000));
-    const connectionDistance = 120;
+    const connectionDistance = 145;
     const mouse = { x: null, y: null, radius: 150 };
     
     // Dynamic theme colors managed via observer
-    let accentColor = 'rgba(0, 255, 157, 0.4)';
-    let secondaryColor = 'rgba(192, 132, 252, 0.15)';
-    let coreGlowColor = '192, 132, 252';
+    let accentColor = 'rgba(0, 210, 255, 0.45)';
+    let secondaryColor = 'rgba(0, 255, 157, 0.2)';
+    let coreGlowColor = '0, 210, 255';
 
     const updateColors = () => {
       const isLight = document.documentElement.getAttribute('data-theme') === 'light';
@@ -28,9 +28,9 @@ const ParticleBackground = () => {
         secondaryColor = 'rgba(124, 58, 237, 0.15)'; // Violet
         coreGlowColor = '124, 58, 237';
       } else {
-        accentColor = 'rgba(0, 255, 157, 0.4)'; // Cyber-mint for dark mode
-        secondaryColor = 'rgba(192, 132, 252, 0.15)'; // Lavender
-        coreGlowColor = '192, 132, 252';
+        accentColor = 'rgba(0, 210, 255, 0.45)'; // Electric cyan/teal for dark mode
+        secondaryColor = 'rgba(0, 255, 157, 0.2)'; // Neon mint-green
+        coreGlowColor = '0, 210, 255';
       }
       particles.forEach((p) => {
         p.color = accentColor;
@@ -122,7 +122,7 @@ const ParticleBackground = () => {
 
           if (dist < connectionDistance) {
             const warpFade = Math.max(0.2, 1 - (speedMultiplier - 1) / 5);
-            const alpha = (1 - dist / connectionDistance) * 0.15 * warpFade;
+            const alpha = (1 - dist / connectionDistance) * 0.22 * warpFade;
             
             // Draw connection line
             ctx.strokeStyle = accentColor.replace(/[\d.]+\)$/, `${alpha})`);

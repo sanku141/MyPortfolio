@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00ff9d" />
+      <stop offset="100%" stop-color="#00d2ff" />
+    </linearGradient>
+  </defs>
+  <!-- Dark Obsidian Rounded Background -->
+  <rect width="100" height="100" rx="22" fill="#030712" />
+  <rect width="92" height="92" x="4" y="4" rx="18" fill="#080d1a" stroke="url(#logo-grad)" stroke-width="3.5" />
+  
+  <!-- Sleek Initials -->
+  <text 
+    x="50" 
+    y="52" 
+    font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" 
+    font-weight="900" 
+    font-size="38" 
+    fill="url(#logo-grad)" 
+    text-anchor="middle" 
+    dominant-baseline="middle"
+    letter-spacing="-1px"
+  >SK</text>
+</svg>

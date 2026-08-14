@@ -57,12 +57,14 @@ html {
 body {
   font-family: var(--font-body);
   background-color: var(--bg-primary);
-  /* Dotted grid pattern overlay */
+  /* Cyber constellation style: Dotted grid + soft glowing cyan and purple radial spotlights */
   background-image:
-    radial-gradient(rgba(0, 255, 157, 0.04) 1px, transparent 1px),
-    radial-gradient(rgba(168, 85, 247, 0.03) 1px, transparent 1px);
-  background-size: 30px 30px;
-  background-position: 0 0, 15px 15px;
+    radial-gradient(circle at 80% 25%, rgba(0, 210, 255, 0.05) 0%, transparent 45%),
+    radial-gradient(circle at 20% 75%, rgba(192, 132, 252, 0.03) 0%, transparent 50%),
+    radial-gradient(rgba(0, 210, 255, 0.035) 1px, transparent 1px),
+    radial-gradient(rgba(192, 132, 252, 0.02) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 30px 30px, 30px 30px;
+  background-position: 0 0, 0 0, 0 0, 15px 15px;
   color: var(--text-primary);
   overflow-x: hidden;
   line-height: 1.6;
@@ -333,35 +335,49 @@ body {
 }
 
 .hero-title {
-  font-family: var(--font-heading);
+  font-family: var(--font-body); /* Use Outfit for a clean, premium, geometric look */
   font-size: clamp(2.5rem, 6vw, 4.5rem);
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 20px;
-  letter-spacing: -1px;
+  letter-spacing: -1.5px; /* Tighter letter-spacing for premium feel */
+}
+
+/* Bright, high-contrast cyan-to-blue name gradient specifically for Hero readability */
+.hero-title .gradient-text {
+  background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-blue) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .role-container {
   font-family: var(--font-mono);
-  font-size: clamp(1.2rem, 3vw, 1.8rem);
-  color: var(--accent-cyan);
+  font-size: clamp(1.1rem, 2.5vw, 1.55rem);
+  color: var(--accent-purple); /* Electric purple/lavender for crisp tech contrast */
+  text-shadow: 0 0 12px var(--border-glow);
   margin-bottom: 25px;
   min-height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: 500;
 }
 
 .cursor {
   animation: blink 1s step-end infinite;
   font-weight: bold;
+  color: var(--accent-purple);
 }
 
 .hero-subtitle {
-  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-size: clamp(1rem, 2vw, 1.2rem);
   color: var(--text-secondary);
-  max-width: 600px;
+  font-weight: 400;
+  line-height: 1.6;
+  max-width: 650px;
   margin: 0 auto 35px auto;
+  letter-spacing: 0.1px;
 }
 
 .hero-actions {
@@ -1539,12 +1555,11 @@ textarea.form-input {
 
 .portrait-glow-back {
   position: absolute;
-  width: 320px;
-  height: 320px;
-  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
-  background: linear-gradient(135deg, rgba(0, 242, 254, 0.2) 0%, rgba(157, 78, 221, 0.2) 100%);
-  filter: blur(40px);
-  animation: blob-animate 12s infinite alternate ease-in-out;
+  width: 330px;
+  height: 330px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 210, 255, 0.3) 0%, rgba(192, 132, 252, 0.1) 60%, transparent 100%);
+  filter: blur(35px);
   z-index: 1;
   pointer-events: none;
 }
@@ -1553,20 +1568,19 @@ textarea.form-input {
   position: relative;
   width: 320px;
   height: 320px;
-  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  border-radius: 50%; /* Perfect circle avatar like mockup image */
   background: var(--bg-secondary);
   border: 2px solid var(--border-color);
-  box-shadow: var(--glass-glow), 0 0 30px rgba(0, 242, 254, 0.1);
+  box-shadow: var(--glass-glow), 0 0 35px rgba(0, 210, 255, 0.2);
   overflow: hidden;
   z-index: 2;
-  transition: transform 0.1s ease-out, border-color 0.3s ease, border-radius 8s infinite alternate ease-in-out;
-  animation: border-blob 8s infinite alternate ease-in-out;
+  transition: transform 0.15s ease-out, border-color 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
 
 .interactive-portrait-frame:hover {
   border-color: var(--accent-cyan);
-  box-shadow: var(--glass-glow), 0 0 40px rgba(0, 242, 254, 0.25);
+  box-shadow: var(--glass-glow), 0 0 45px rgba(0, 210, 255, 0.4);
 }
 
 .interactive-portrait-img {
